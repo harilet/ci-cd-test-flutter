@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Hi welcome'
+              'Hi welcome1'
             ),
             const Text(
               'You have pushed the button this many times:',
