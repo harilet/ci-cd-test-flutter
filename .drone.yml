@@ -32,6 +32,7 @@ steps:
   - gcloud auth activate-service-account --key-file ~/service_account.json
   - gcloud run deploy $SERVICE_NAME$DRONE_PULL_REQUEST --image=asia-south1-docker.pkg.dev/savvy-girder-397211/pr-repository/pr-image:$DRONE_PULL_REQUEST --platform=managed --region=$GCR_REGION --allow-unauthenticated --project=$GCR_PROJECT
   - gcloud run services describe $SERVICE_NAME$DRONE_PULL_REQUEST --region $GCR_REGION --project $GCR_PROJECT --format json > service.json
+  
 volumes:
 - name: docker_socket
   host:
