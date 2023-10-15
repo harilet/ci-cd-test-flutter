@@ -20,7 +20,7 @@ steps:
   - cat auth.json | docker login -u _json_key --password-stdin https://asia-south1-docker.pkg.dev
   - docker push asia-south1-docker.pkg.dev/savvy-girder-397211/pr-repository/pr-image:$DRONE_PULL_REQUEST
 - name: deploy_pr
-  image: google/cloud-sdk:latest
+  image: google/cloud-sdk
   environment:
     GCP_DOCKER_BUILDER_KEY:
       from_secret: GCP_DOCKER_BUILDER_KEY
