@@ -48,7 +48,7 @@ type: docker
 name: clore_pr_deployment
 
 steps:
-- name: remove_cloud_run
+- name: remove_cloud_image
   image: docker:dind
   volumes:
   - name: docker_socket
